@@ -30,6 +30,7 @@ namespace ppractic2
             };
             command.ExecuteNonQuery();//выполнение команды
             MessageBox.Show("Книга успешно добавлена.Библиотека обновлена.");
+            Log.Logger("Книга добавлена");
             Form1 qwer = new Form1();
             this.Hide();
             qwer.Show();

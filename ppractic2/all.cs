@@ -35,6 +35,7 @@ namespace ppractic2
             command1.Parameters.Add("@id", MySqlDbType.Int32).Value = Convert.ToInt32(delete.Text);
             command1.ExecuteNonQuery();//выполнение команды
             MessageBox.Show("Книга удалена успешно", "Информация");
+            Log.Logger("Книга удалена");
             connection.Close();
             Form1 sc = new Form1();
             sc.Show();
@@ -67,6 +68,7 @@ namespace ppractic2
         private void close_Click(object sender, EventArgs e)
         {
             Close();
+            Log.Logger("Закрытие программы");
         }
 
         private void add_Click(object sender, EventArgs e)
